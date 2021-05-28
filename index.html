@@ -6,85 +6,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smarty Pants Quiz</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
     <header>
-        <h1>Smarty Pants Quiz</h1>
-        <div class="small-font link">High Score</div>
+
+        <a href="#" class="small-font link">High Score</a>
         <div class="large-font" id="timer">Timer</div>
-        <button class="start-button">Start Quiz</button>
-        <link rel="stylesheet" href="./style.css">
+
+
     </header>
+
+    <section>
+        <h1>Smarty Pants Quiz</h1>
+        <p>
+            Try to be the best nerd you can be!
+        </p>
+        <button class="start-button" id="myButton">Start Quiz</button>
+
+    </section>
 
     <main>
         <section>
             <div class="the-question">
                 <h2 id="question"></h2>
 
-                <ol>
+                <ol id="questionList">
                     <li>
-                        <button class="option-button" value="wrong"></button>
+                        <button class="option-button" class="hidden"></button>
                     </li>
                     <li>
-                        <button class="option-button" value="wrong"></button>
+                        <button class="option-button" class="hidden"></button>
                     </li>
                     <li>
-                        <button class="option-button" value="correct"></button>
+                        <button class="option-button" class="hidden"></button>
                     </li>
                     <li>
-                        <button class="option-button" value="wrong"></button>
-                    </li>
-
-
-                </ol>
-
-            </div>
-
-
-
-
-
-            <!-- <div class="the-question">
-                <h2 id="question">What is Dumbledor's favorite candy?</h2>
-
-                <ol>
-                    <li>
-                        <button class="option-button" value="wrong">c</button>
-                    </li>
-                    <li>
-                        <button class="option-button" value="correct">Lemon Drops</button>
-                    </li>
-                    <li>
-                        <button class="option-button" value="wrong">Berti Bots Every Flavor Beans</button>
-                    </li>
-                    <li>
-                        <button class="option-button" value="wrong">Peppermint Sticks</button>
-                    </li>
-
-
-                </ol>
-
-            </div>
-
-
-
-
-            <div class="the-question">
-                <h2 id="question">In which Lord of the Rings film did Viggo Mortenson break his foot?</h2>
-
-                <ol>
-                    <li>
-                        <button class="option-button" value="correct">The Two Towers</button>
-                    </li>
-                    <li>
-                        <button class="option-button" value="wrong">The Return of the King</button>
-                    </li>
-                    <li>
-                        <button class="option-button" value="wrong">None of the Above</button>
-                    </li>
-                    <li>
-                        <button class="option-button" value="wrong">The Fellowship of the Ring</button>
+                        <button class="option-button" class="hidden"></button>
                     </li>
 
 
@@ -96,38 +55,18 @@
 
 
 
-            <div class="the-question">
-                <h2 id="question">Which of these are the strongest villians in the Dr. Who Univers?</h2>
 
-                <ol>
-                    <li>
-                        <button class="option-button" value="wrong">The Daleks</button>
-                    </li>
-                    <li>
-                        <button class="option-button" value="correct">The Weeping Angels</button>
-                    </li>
-                    <li>
-                        <button class="option-button" value="wrong">The Cyber Men</button>
-                    </li>
-                    <li>
-                        <button class="option-button" value="wrong">The Master</button>
-                    </li>
+        </section>
 
-
-                </ol>
-
-            </div>
-        </section> -->
-
-            <section>
-                <form>
-                    <h2>Finished!</h2>
-                    <h3 for="score" class="highscore count">Your score is:</h3>
-                    <h3>Enter your intials</h3>
-                    <input type="text" id="score">
-                    <input type="submit">
-                </form>
-            </section>
+        <section>
+            <form>
+                <h2>Finished!</h2>
+                <h3 for="score" class="highscore-count">Your score is:</h3>
+                <h3>Enter your intials</h3>
+                <input type="text" id="score">
+                <input type="submit">
+            </form>
+        </section>
 
 
 

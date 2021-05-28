@@ -29,7 +29,7 @@ var questionsArray = [{
         ]
     },
     {
-        theQuestion: "Which of these are the strongest villians in the Dr. Who Univers?",
+        theQuestion: "Which of these are the strongest villians in the Dr. Who Universe?",
         correctAnswer: "The Weeping Angels",
         choices: [
             "The Weeping Angels",
@@ -44,4 +44,7 @@ var questionsArray = [{
 
 
 
+
 ];
+
+localStorage.setItem("myQuestions", JSON.stringify(questionsArray));

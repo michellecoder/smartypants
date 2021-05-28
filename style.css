@@ -1,3 +1,34 @@
 * {
-    display: inline-block;
+    box-sizing: content-box;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+h1,
+p {
+    text-align: center;
+}
+
+.start-button {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    background-color: rgb(82, 37, 124);
+    color: cornsilk;
+    border-radius: 15%;
+}
+
+button {
+    margin: auto;
+    background-color: rgb(82, 37, 124);
+    color: rgb(253, 248, 229);
+    border-radius: 15%;
+}
+
+.hidden {
+    display: none;
 }
