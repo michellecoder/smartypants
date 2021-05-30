@@ -12,8 +12,8 @@ var questionsArray = [{
         theQuestion: "What is Dumbledor's favorite candy?",
         correctAnswer: "Lemon Drops",
         choices: [
-            "Lemon Drops",
             "Chocolate Frogs",
+            "Lemon Drops",
             "Berti Bots Every Flavor Beans",
             "Peppermint Sticks"
         ]
@@ -22,19 +22,19 @@ var questionsArray = [{
         theQuestion: "In which Lord of the Rings film did Viggo Mortenson break his foot?",
         correctAnswer: "The Two Towers",
         choices: [
-            "The Two Towers",
+            "The Fellowship of the Ring",
             "The Return of the King",
             "None of the Above",
-            "The Fellowship of the Ring"
+            "The Two Towers"
         ]
     },
     {
         theQuestion: "Which of these are the strongest villians in the Dr. Who Universe?",
         correctAnswer: "The Weeping Angels",
         choices: [
-            "The Weeping Angels",
-            "The Daleks",
             "The Cyber Men",
+            "The Daleks",
+            "The Weeping Angels",
             "The Master"
         ]
     }
