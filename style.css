@@ -35,10 +35,6 @@ button {
     border-radius: 15%;
 }
 
-.the-question {
-    display: none;
-}
-
-section form {
+.hidden {
     display: none;
 }

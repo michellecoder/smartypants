@@ -8,7 +8,8 @@ var myButtonEl = document.getElementById("myButton");
 var scoreEl = document.getElementById("score");
 var myQ = JSON.parse(localStorage.getItem("myQuestions"));
 var timeLeft = 75;
-// console.log(myQ);
+var timeLapse
+    // console.log(myQ);
 
 // var optionButton;
 // var text;
@@ -22,7 +23,6 @@ function displayQuestion() {
 
     for (var i = 0; i < questionsArray[index].choices.length; i++) {
         // to display answers and question
-        // console.log(questionListEL.children[i].children);
         questionListEL.children[i].children[0].textContent = questionsArray[index].choices[i];
     }
 
@@ -35,16 +35,16 @@ function displayQuestion() {
 
 
 function startGame() {
-    document.querySelector("#myButton").style = "display: none;";
-
-    var timeLapse = setInterval(function() {
+    document.querySelector("#myButton").classList.add("hidden")
+        // Timer interval
+    timeLapse = setInterval(function() {
 
 
 
         if (timeLeft === 0) {
             clearInterval(timeLapse);
 
-            goToFinished;
+            goToFinished();
         } else {
             timeLeft--;
             timerEl.textContent = "Time:" + timeLeft;
@@ -52,27 +52,39 @@ function startGame() {
 
         }
     }, 1000);
-    document.querySelector(".the-question").style = "display: inline;";
+    document.querySelector("#question-box").classList.remove("hidden")
     displayQuestion();
+    console.log(document.querySelector("#question-box"))
 }
 myButtonEl.addEventListener("click", startGame);
-// 
+// correct or wrong tabs 
 questionListEL.addEventListener("click", function(event) {
     var varReply = "";
     if (event.target.textContent === questionsArray[index].correctAnswer) {
         console.log(event.target);
         console.log("correct");
         document.getElementById("reply").textContent = "Correct";
-        index++;
-        displayQuestion();
 
     } else if (event.target.textContent !== questionsArray[index].correctAnswer) {
         console.log("Wrong!");
         document.getElementById("reply").textContent = "Wrong";
-        index++;
-        displayQuestion();
 
     }
+    index++;
+
+    if (index === 4) {
+        endGame();
+        return;
+    }
+    // endGame() will go to the Finished page with intials added and will 
+    // stop timer
+
+
+    displayQuestion();
+
+
+
+
 
 
 
@@ -84,9 +96,10 @@ document.getElementById("score").textContent = timeLeft;
 
 
 
-// function goToFinished() {
-//     timerEl.textContent = "";
-//     var scoreCard = document.getElementById("#score");
-//     scoreEl.appendChild(scoreCard);
-//     document.querySelector(".score").style = "display: none;";
-// }
+function endGame() {
+    clearInterval(timeLapse);
+    //     timerEl.textContent = "";
+    //     var scoreCard = document.getElementById("#score");
+    //     scoreEl.appendChild(scoreCard);
+    //     document.querySelector(".score").style = "display: none;";
+}
